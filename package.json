@@ -1,0 +1,26 @@
+{
+  "name": "sesh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbieleism/sesh.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbieleism/sesh/issues"
+  },
+  "homepage": "https://github.com/jbieleism/sesh#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.6",
+    "nodemon": "^1.11.0",
+    "path": "^0.12.7"
+  }
+}
