@@ -12,8 +12,6 @@ mongoose.connect('connection', function() {
   console.log('Connected to database')
 })
 
-
-// app.use('/app', express.static(__dirname + '/app'))
 // app.use('../node_modules', express.static(__dirname +  "/node-modules"))
 
 
@@ -21,6 +19,7 @@ mongoose.connect('connection', function() {
 app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, '../client/index.html'))
 })
+// app.use('/app', express.static(__dirname + '/app'))
 
 
 app.listen(port, function(){

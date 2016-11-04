@@ -1,6 +1,9 @@
-function(){
+// (function(){
 
-  angular.module('Sesh', [])
+//   angular.module('Sesh', [])
 
 
-)();
+// )());
+
+
+alert('hello')
