@@ -1,27 +1,42 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
-var path = require('path');
-
-var app = express();
-var port = 8000;
+const express    = require('express'),
+      bodyParser = require('body-parser'),
+      mongoose   = require('mongoose'),
+      path       = require('path'),
+      app        = express(),
+      port       = 8000;
 
 mongoose.connect('mongodb://localhost:27017/seshdb');
 
-mongoose.connect('connection', function() {
-  console.log('Connected to database')
-})
+mongoose.connect('connection', () => console.log('Connected to database'));
 
-// app.use('../node_modules', express.static(__dirname +  "/node-modules"))
+let count = 0;
+
+let ensureAuthenticated = (req, res, next) => {
+
+  count++;
+  console.log(`${count} this many <--- `);
+  console.log(req.headers);
+  next();
+
+};
 
 
 
-app.get('/', function(req, res){
-  res.sendFile(path.join(__dirname, '../client/index.html'))
-})
-// app.use('/app', express.static(__dirname + '/app'))
+app.get('/', ensureAuthenticated, (req, res) => res.sendFile(path.join(__dirname, './index.html')));
+
+app.use('/public', express.static(`${__dirname}/client`));
+
+app.listen(port, () => console.log('listening on port: ', port));
 
 
-app.listen(port, function(){
-  console.log('listening on port: ', port)
-})
+
+
+
+
+
+
+
+
+
+
+
