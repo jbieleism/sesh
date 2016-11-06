@@ -9,20 +9,20 @@ mongoose.connect('mongodb://localhost:27017/seshdb');
 
 mongoose.connect('connection', () => console.log('Connected to database'));
 
-let count = 0;
+// let count = 0;
 
-let ensureAuthenticated = (req, res, next) => {
+// let ensureAuthenticated = (req, res, next) => {
 
-  count++;
-  console.log(`${count} this many <--- `);
-  console.log(req.headers);
-  next();
+//   count++;
+//   console.log(`${count} this many <--- `);
+//   console.log(req.headers);
+//   next();
 
-};
+// };
 
 
 
-app.get('/', ensureAuthenticated, (req, res) => res.sendFile(path.join(__dirname, './index.html')));
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, './index.html')));
 
 app.use('/public', express.static(`${__dirname}/client`));
 
