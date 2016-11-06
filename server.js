@@ -7,10 +7,10 @@ var app = express();
 
 mongoose.connect('mongodb://localhost:27017/seshdb', () => console.log("Connected to Database"))
 
-
 app.use(bodyParser.json())
 
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')) )
+app.use('/public', express.static(__dirname + '/public'))
 
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')) )
 
 app.listen(8000, () => console.log("listening on port 8000"))
