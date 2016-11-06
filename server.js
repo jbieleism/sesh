@@ -1,42 +1,16 @@
-const express    = require('express'),
-      bodyParser = require('body-parser'),
-      mongoose   = require('mongoose'),
-      path       = require('path'),
-      app        = express(),
-      port       = 8000;
+var express = require('express');
+var bodyParser = require('body-parser');
+var mongoose = require('mongoose')
+var path = require('path')
 
-mongoose.connect('mongodb://localhost:27017/seshdb');
+var app = express();
 
-mongoose.connect('connection', () => console.log('Connected to database'));
-
-// let count = 0;
-
-// let ensureAuthenticated = (req, res, next) => {
-
-//   count++;
-//   console.log(`${count} this many <--- `);
-//   console.log(req.headers);
-//   next();
-
-// };
+mongoose.connect('mongodb://localhost:27017/seshdb', () => console.log("Connected to Database"))
 
 
+app.use(bodyParser.json())
 
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, './index.html')));
-
-app.use('/public', express.static(`${__dirname}/client`));
-
-app.listen(port, () => console.log('listening on port: ', port));
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')) )
 
 
-
-
-
-
-
-
-
-
-
-
-
+app.listen(8000, () => console.log("listening on port 8000"))
