@@ -1,12 +1,11 @@
 (function(){
 
   angular.module('Sesh', [])
-    .controller('SignupController', ['$state', '$scope', '$http', function(){
+    .controller('SignupController', ['$scope', '$state', '$http', function($scope, $state, $http){
 
       $scope.createUser = function(){
-        $http.post('/api/user/signup', $scope.newUser)
-          .success(function(response){
-            console.log('successful response: ', response)
+        $http.post('api/user/signup', $scope.newUser).success(function(response){
+
           })
           .error(function(error){
             console.log('There was an error: ', error)
@@ -14,6 +13,5 @@
       }
 
     }])
-
 
 }())

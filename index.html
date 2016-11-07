@@ -1,21 +1,23 @@
 <html ng-app="Sesh">
 <head>
   <link rel="stylesheet" type="text/css" href="https://bootswatch.com/darkly/bootstrap.min.css">
-  <!-- <link rel="stylesheet" type="text/css" href=""> -->
+  <link rel="stylesheet" type="text/css" href="public/css/styles.css">
   <title>Sesh</title>
-</head>
-  <nav class="navbar navbar-default">
-
-  </nav>
-
-<body>
-
-<div ui-view></div>
-
-</body>
-
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
   <script type="text/javascript" src="/public/index.js"></script>
+
+</head>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <a ui-sref="signUp">Create an account</a>
+</nav>
+
+<body>
+
+  <div ui-view></div>
+
+</body>
+
+
 
 </html>
