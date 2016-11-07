@@ -1,14 +1,13 @@
-<div class="row">
-  <div id="signupForm" class="col-md-6">
-  <strong>Create A Profile</strong>
-    <div class="row signupEmail">
-      <input type="text" ng-model="newUser.email" placeholder="email">
+<div id="signupForm" class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h2>Create A Profile</h2>
+    <div class="row signupEl">
+      <input type="text" ng-model="newUser.email" placeholder="email" class="form-control">
     </div>
 
-    <div class="row passwordEmail">
-      <input type="password" ng-model="newUser.password" placeholder="password">
+    <div class="row signupEl">
+      <input type="password" ng-model="newUser.password" placeholder="password" class="form-control">
     </div>
     <button class="btn btn-primary" ng-click="createUser()">Submit</button>
   </div>
 </div>
-<script type="text/javascript"></script>

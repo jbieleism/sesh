@@ -1,17 +1,14 @@
 (function(){
+    angular.module('Sesh')
+      .controller('SignupController', ['$scope', '$state', '$http', function($scope, $state, $http){
 
-  angular.module('Sesh', [])
-    .controller('SignupController', ['$scope', '$state', '$http', function($scope, $state, $http){
+        $scope.createUser = function(){
+            console.log($scope.newUser);
+            $http.post('api/user/signup', $scope.newUser).success(function(response){
 
-      $scope.createUser = function(){
-        $http.post('api/user/signup', $scope.newUser).success(function(response){
-
-          })
-          .error(function(error){
-            console.log('There was an error: ', error)
-          })
-      }
-
-    }])
-
-}())
+            }).error(function(error){
+                console.log(error);
+            })
+        }
+    }]);
+}());
