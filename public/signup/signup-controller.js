@@ -4,10 +4,10 @@
 
         $scope.createUser = function(){
             console.log($scope.newUser);
-            $http.post('api/user/signup', $scope.newUser).success(function(response){
-
+            $http.post('/api/user/signup', $scope.newUser).success(function(response){
+                console.log("Successful response: ", response)
             }).error(function(error){
-                console.log(error);
+                console.log("There has been a grave error: ", error);
             })
         }
     }]);
