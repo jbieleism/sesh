@@ -6,7 +6,6 @@
 
       $urlRouterProvider.otherwise('/')
 
-
       $stateProvider
         .state('signUp', {
           url: '/signup',

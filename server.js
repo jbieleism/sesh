@@ -18,6 +18,6 @@ app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')) )
 app.post('/api/user/signup', authenticationController.signup);
 app.post('/api/user/login', authenticationController.login)
 
+var port = 8000;
 
-
-app.listen(8000, () => console.log("listening on port 8000"))
+app.listen(port, () => console.log("Listening on port: ", port))

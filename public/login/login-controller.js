@@ -1,7 +1,8 @@
 (function(){
 
-  anuglar.module('Sesh')
-    .controller('NavigationController', ['$scope', '$http', '$state', function($scope, $http, $state) {
+  angular.module('Sesh')
+    .controller('LoginController', ['$scope', '$http', '$state', function($scope, $http, $state) {
+
       $scope.loginUser = function(){
         $http.post('/api/user/login', $scope.login)
           .success(function(resposne){
