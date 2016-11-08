@@ -1,36 +1,16 @@
-// (function(){
+(function(){
 
-//   angular.module('Sesh')
-//     .controller('LoginController', ['$scope', '$state', '$http', function($scope, $state){
+  anuglar.module('Sesh')
+    .controller('NavigationController', ['$scope', '$http', '$state', function($scope, $http, $state) {
+      $scope.loginUser = function(){
+        $http.post('/api/user/login', $scope.login)
+          .success(function(resposne){
+            localStorage.setItem('User-Data', JSON.stringify(response))
+          })
+          .error(function(error){
+            console.log('You have made a grave error: ', error)
+          })
+      }
+    }])
 
-
-
-//     }])
-
-// }())
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      // $scope.loginUser = function(){
-      //   $http.post('/api/user/login', $scope.loginUser)
-      //     .success(function(response){
-      //       console.log("Successful response: ", response)
-      //     })
-      //     .error(function(error){
-      //       console.log("There has been a grave error: ", error)
-      //     })
-      // }
+})()

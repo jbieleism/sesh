@@ -6,3 +6,7 @@ module.exports.signup = function(req, res){
 
   res.json(req.body)
 }
+
+module.exports.login = function(req, res){
+
+}

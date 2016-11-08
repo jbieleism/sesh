@@ -3,14 +3,16 @@ body{
 }
 
 
-#signupForm{
+#signupForm, #loginForm{
   margin: 0 auto;
   text-align:center;
 }
 
-.signupEl{
+.signupEl, .loginEl{
   text-align:center;
   margin:10px;
 }
-
+#passwordInput, #emailInput{
+  text-align:center;
+}
 

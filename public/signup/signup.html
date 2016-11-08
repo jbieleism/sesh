@@ -2,11 +2,11 @@
   <div class="col-md-6 col-md-offset-3">
     <h2>Create A Profile</h2>
     <div class="row signupEl">
-      <input type="text" ng-model="newUser.email" placeholder="email" class="form-control">
+      <input id="emailInput" type="text" ng-model="newUser.email" placeholder="email" class="form-control">
     </div>
 
     <div class="row signupEl">
-      <input type="password" ng-model="newUser.password" placeholder="password" class="form-control">
+      <input id="passwordInput" type="password" ng-model="newUser.password" placeholder="password" class="form-control">
     </div>
     <button class="btn btn-primary" ng-click="createUser()">Submit</button>
   </div>
