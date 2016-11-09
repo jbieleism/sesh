@@ -4,7 +4,7 @@
   angular.module('Sesh', ['ui.router'])
     .config(function($stateProvider, $urlRouterProvider){
 
-      // $urlRouterProvider.otherwise('/')
+      $urlRouterProvider.otherwise('/')
 
       $stateProvider
         .state('signUp', {
@@ -16,6 +16,11 @@
           url: '/login',
           templateUrl: 'public/login/login.html',
           controller: 'LoginController'
+        })
+        .state('editProfile', {
+          url: '/edit-profile',
+          templateUrl: 'public/profile/edit-profile-view.html',
+          controller: 'EditProfileController'
         })
     })
 

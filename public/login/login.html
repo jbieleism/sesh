@@ -1,4 +1,4 @@
-<div id="loginForm" class="row">
+<div ng-show="!loggedIn" id="loginForm" class="row">
   <div class="col-md-6 col-md-offset-3">
   <h2>Login</h2>
     <div class="row loginEl">
@@ -10,4 +10,10 @@
     </div>
     <button class="btn btn-primary" ng-click="loginUser()">Login</button>
   </div>
+</div>
+<div ng-show="loggedIn">
+
+  Already Logged In!
+  <a ui-sref="editProfile">Go To Profile</a>
+
 </div>

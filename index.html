@@ -6,8 +6,11 @@
 
 </head>
 <nav class="navbar navbar-default navbar-fixed-top">
+
   <button class="btn btn-primary btn-default"><a ui-sref="signUp">Create an account</a></button>
-  <button class="btn btn-primary btn-default"><a ui-sref="login">Login</a></button>
+
+  <button ng-show="!loggedIn" class="btn btn-primary btn-default"><a ui-sref="login">Login</a></button>
+
 </nav>
 
 <body>
@@ -25,7 +28,7 @@
 
   <script src="public/signup/signup-controller.js"></script>
   <script src="public/login/login-controller.js"></script>
-
+  <script src="public/profile/edit-controller.js"></script>
 
 
 </html>
