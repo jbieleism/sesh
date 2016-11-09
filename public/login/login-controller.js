@@ -5,7 +5,8 @@
 
       $scope.loginUser = function(){
         $http.post('/api/user/login', $scope.login)
-          .success(function(resposne){
+          .success(function(response){
+            console.log('Successful Login with username: ', response)
             localStorage.setItem('User-Data', JSON.stringify(response))
           })
           .error(function(error){
@@ -14,4 +15,4 @@
       }
     }])
 
-})()
+}());
