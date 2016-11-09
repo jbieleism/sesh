@@ -17,7 +17,12 @@ app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')) )
 
 // Authentication
 app.post('/api/user/signup', authenticationController.signup);
-app.post('/api/user/login', authenticationController.login)
+app.post('/api/user/login', authenticationController.login);
+
+
+// Profile
+// app.post('/api/profile/edit')
+
 
 var port = 8000;
 
