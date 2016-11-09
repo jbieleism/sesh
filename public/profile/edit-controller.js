@@ -4,7 +4,7 @@
 
     .controller('EditProfileController', ['Upload', '$scope', '$state', '$http', function(Upload, $scope, $state, $http){
 
-        $scope.user = JSON.parse(localStorage['User-Data'])
+        $scope.user = JSON.parse(localStorage['User-Data']) || undefined;
 
         $scope.$watch(function(){
           return $scope.file;
@@ -15,13 +15,15 @@
         $scope.upload = function(file) {
           if (file){
             Upload.upload({
-              url: '/api/profile/edit',
+              url: '/api/profile/editPhoto',
               method: 'POST',
-              data: {userId: '$scope.user._id'},
+              data: {
+                userId: $scope.user._id
+              },
               file: file
             })
             .progress(function(e){
-              console.log('progress: ', e);
+              console.log('Firing')
             })
             .success(function(data){
               console.log('Success: ', data);
