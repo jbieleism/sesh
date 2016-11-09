@@ -1,7 +1,7 @@
 (function(){
 
 
-  angular.module('Sesh', ['ui.router'])
+  angular.module('Sesh', ['ui.router', 'ngFileUpload'])
     .config(function($stateProvider, $urlRouterProvider){
 
       $urlRouterProvider.otherwise('/')

@@ -3,8 +3,13 @@ body{
 }
 
 
-#signupForm, #loginForm{
+#signupForm, #loginForm, #editProfileForm{
   margin: 0 auto;
+  text-align:center;
+}
+
+.profileInput, .profileInput input, .profileInput textarea{
+
   text-align:center;
 }
 

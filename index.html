@@ -7,11 +7,13 @@
 </head>
 <nav class="navbar navbar-default navbar-fixed-top">
 
-  <button class="btn btn-primary btn-default"><a ui-sref="signUp">Create an account</a></button>
+  <button class="btn btn-primary btn-default" ui-sref="signUp">Create an account</button>
 
-  <button ng-show="!loggedIn" class="btn btn-primary btn-default"><a ui-sref="login">Login</a></button>
+  <button ng-show="!loggedIn" class="btn btn-primary btn-default" ui-sref="login">Login</button>
 
 </nav>
+
+
 
 <body>
 
@@ -21,14 +23,24 @@
 
 
 
+
+
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
   <script type="text/javascript" src="/public/index.js"></script>
 
-
+  <!-- controllers -->
   <script src="public/signup/signup-controller.js"></script>
   <script src="public/login/login-controller.js"></script>
   <script src="public/profile/edit-controller.js"></script>
+
+
+  <!-- Libraries -->
+  <script src="/node_modules/ng-file-upload/dist/ng-file-upload.js"></script>
+  <script src="/node_modules/ng-file-upload/dist/ng-file-upload-all.js"></script>
+  <script src="/node_modules/ng-file-upload/dist/ng-file-upload-shim.js"></script>
+
+
 
 
 </html>

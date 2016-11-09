@@ -1,14 +1,18 @@
-<div class="row">
-  Image Upload
-</div>
+<div class="container" id="editProfileForm">
+  <div class="row">
+    <button class="button btn btn-success" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'"
+    accept="image/*" >Upload a Photo</button>
+  </div>
 
 
-<div class="row">
-  <input class="form-control" type="text" ng-model="user.username">
-</div>
+  <div class="row profileInput">
+    <input id="editUsername" class="form-control" type="text" ng-model="user.username" placeholder="username">
+  </div>
 
 
 
-<div class="row">
-  <textarea type="text" class="form-control" ng-model="user.bio"> </textarea>
+  <div class="row profileInput">
+    <h1>Bio</h1>
+    <textarea id="editBio" type="text" class="form-control" ng-model="user.bio"> </textarea>
+  </div>
 </div>
