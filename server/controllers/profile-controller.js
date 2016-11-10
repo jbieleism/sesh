@@ -11,7 +11,19 @@ module.exports.updatePhoto = function(req, res){
   console.log("user " + userId + " submitting ", file)
 
   var tempPath = file.path;
-  var uploadDate = new Date().toISOString;
-  var targetPath = path.join(__dirname + '../../uploads/' + userId + uploadDate + file.name)
+  var uploadDate = new Date();
+  var targetPath = path.join(__dirname, '../../uploads/' + userId + uploadDate + file.name)
+
+  fs.rename(tempPath, targetPath, function(err){
+    if (err){
+      console.log("There has been a grave error: ", err)
+    }
+    else{
+      console.log("File Successfully moved")
+      // User.findById(userId, function(err, userData){
+
+      // })
+    }
+  })
 
 };
