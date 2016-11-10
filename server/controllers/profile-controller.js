@@ -41,29 +41,29 @@ module.exports.updatePhoto = function(req, res){
 
 
 
-
 module.exports.updateUsername = function(req, res){
+
   var username = req.body.username;
   var userId = req.body.userId;
 
   User.findById(userId, function(err, userData){
+
     var user = userData;
-    user.username = user;
+    user.username = username;
 
     user.save(function(error){
       if (err){
         console.log("Failed to save username");
         res.json({status: 500});
       }
-      else{
+      else {
         console.log("Successfully updated username");
+        console.log("This is the user: ", userData);
+
         res.json({status: 200})
       }
     })
   })
-
-
-
 
 
 };
