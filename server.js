@@ -25,9 +25,11 @@ app.post('/api/user/signup', authenticationController.signup);
 app.post('/api/user/login', authenticationController.login);
 
 
+
+
 // Profile
 app.post('/api/profile/editPhoto', multipartMiddleware, profileController.updatePhoto)
-
+app.post('/api/profile/updateUsername', profileController.updateUsername)
 
 var port = 8000;
 

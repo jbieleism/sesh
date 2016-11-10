@@ -6,13 +6,16 @@
 
 
   <div class="row profileInput">
+    <!-- ng-blur will fire function when focus is removed -->
     <input id="editUsername" class="form-control" type="text" ng-model="user.username" placeholder="username">
+    <button ng-click="updateUsername()" class="btn btn-default btn-primary">Update Username</button>
   </div>
 
 
 
   <div class="row profileInput">
     <h1>Bio</h1>
-    <textarea id="editBio" type="text" class="form-control" ng-model="user.bio"> </textarea>
+    <textarea id="editBio" type="text" class="form-control" ng-model="user.bio" ng-blur="updateBio()"> </textarea>
   </div>
+
 </div>
