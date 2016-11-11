@@ -2,17 +2,12 @@ body{
   margin-top:70px;
 }
 
-
+/*General Forms and Input*/
 #signupForm, #loginForm, #editProfileForm{
   margin: 0 auto;
   text-align:center;
   max-width:700px;
 }
-
-.profileInput, .profileInput input, .profileInput textarea{
-  text-align:center;
-}
-
 .signupEl, .loginEl{
   text-align:center;
   margin:10px;
@@ -20,5 +15,36 @@ body{
 #passwordInput, #emailInput{
   text-align:center;
 }
+
+
+
+/*Edit Profile*/
+.profileInput, .profileInput input, .profileInput textarea{
+  text-align:center;
+}
+
+#upload-photo-button{
+  margin-top:30px;
+}
+
+#username-update{
+  margin-top:30px;
+}
+#username-submit{
+  margin-top:30px;
+}
+
+
+
+#bio-text{
+  margin-top:50px;
+}
+#bio-submit{
+  margin-top:30px;
+}
+
+
+
+
 
 
