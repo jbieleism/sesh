@@ -88,7 +88,7 @@ module.exports.updateBio = function(req, res){
         res.json({status: 500});
       }
       else{
-        console.log("Successfully saved bio");
+        console.log("Successfully saved bio request to db");
         res.json({status: 200});
       }
     });

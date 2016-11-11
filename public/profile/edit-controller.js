@@ -13,6 +13,9 @@
           $scope.upload($scope.file);
         });
 
+
+
+
         $scope.upload = function(file) {
           if (file){
             Upload.upload({
@@ -36,6 +39,9 @@
         };
 
 
+
+
+
         $scope.updateUsername = function(){
 
           var request = {
@@ -46,6 +52,7 @@
           $http.post('api/profile/updateUsername', request)
             .success(function(){
               console.log("Successfully updated username: ", request);
+              $scope.user.username = null;
             })
             .error(function(error){
               console.log("There was a grave error: ", error);
@@ -53,18 +60,21 @@
 
         }
 
+
+
+
+
         $scope.updateBio = function(){
 
           var request = {
-
             userId: $scope.user._id,
             bio: $scope.user.bio
-
           };
 
           $http.post('api/profile/bio', request)
             .success(function(){
-              console.log("Successfully updated bio")
+              console.log("Successful http post for bio");
+              $scope.user.bio = null;
             })
             .error(function(error){
               console.log("There has been a grave error: ", error);
