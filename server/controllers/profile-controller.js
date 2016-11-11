@@ -3,6 +3,7 @@ var path = require('path');
 var fs = require('fs');
 
 
+//function delivers photo file to uploads dir
 module.exports.updatePhoto = function(req, res){
 
   var file = req.files.file;
@@ -40,7 +41,7 @@ module.exports.updatePhoto = function(req, res){
 
 
 
-
+//Function will update username in database through the model
 module.exports.updateUsername = function(req, res){
 
   var username = req.body.username;
@@ -65,14 +66,18 @@ module.exports.updateUsername = function(req, res){
     })
   })
 
-
 };
 
 
 
 
 
+module.exports.updateBio = function(req, res){
 
+  var bio = req.body.bio;
+  var userId = req.body.userId;
+
+}
 
 
 

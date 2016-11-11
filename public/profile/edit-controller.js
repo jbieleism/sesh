@@ -53,6 +53,28 @@
 
         }
 
+        $scope.updateBio = function(){
+
+          var request = {
+
+            userId: $scope.user._id,
+            bio: $scope.user.bio
+
+          };
+
+          $http.post('api/profile/bio', request)
+            .success(function(){
+              console.log("Successfully updated bio")
+            })
+            .error(function(error){
+              console.log("There has been a grave error: ", error);
+            })
+
+
+
+        }
+
+
     }]);
 
 

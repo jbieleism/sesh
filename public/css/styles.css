@@ -6,7 +6,7 @@ body{
 #signupForm, #loginForm, #editProfileForm{
   margin: 0 auto;
   text-align:center;
-  max-width:400px;
+  max-width:700px;
 }
 
 .profileInput, .profileInput input, .profileInput textarea{
@@ -20,4 +20,5 @@ body{
 #passwordInput, #emailInput{
   text-align:center;
 }
+
 
