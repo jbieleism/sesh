@@ -21,6 +21,13 @@
             console.log('You have made a grave error: ', error);
           })
       }
+
+      $scope.logoutUser = function(){
+        localStorage['User-Data'] = null;
+        $scope.loggedIn = false;
+      }
+
+
     }])
 
 }());
