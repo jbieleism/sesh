@@ -26,10 +26,10 @@ app.post('/api/user/login', authenticationController.login);
 
 
 
-
 // Profile
 app.post('/api/profile/editPhoto', multipartMiddleware, profileController.updatePhoto)
 app.post('/api/profile/updateUsername', profileController.updateUsername)
+app.post('/api/profile/bio', profileController.updateBio)
 
 var port = 8000;
 

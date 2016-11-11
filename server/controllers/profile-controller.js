@@ -77,6 +77,25 @@ module.exports.updateBio = function(req, res){
   var bio = req.body.bio;
   var userId = req.body.userId;
 
+  User.findById(userId, function(err, userData){
+
+    var user = userData;
+    user.bio = bio;
+    user.save(function(error){
+
+      if (err){
+        console.log("Failed to save bio");
+        res.json({status: 500});
+      }
+      else{
+        console.log("Successfully saved bio");
+        res.json({status: 200});
+      }
+    });
+
+  });
+
+
 }
 
 
