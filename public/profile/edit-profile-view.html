@@ -5,7 +5,7 @@
   </div>
 
 
-  <div id="username-update" class="row profileInput">
+  <div id="username-update" class="container-fluid row profileInput">
     <!-- ng-blur will fire function when focus is removed -->
     <input id="editUsername" class="form-control" type="text" ng-model="user.username" placeholder="username">
     <button id="username-submit" ng-click="updateUsername()" class="btn btn-default btn-danger">Update Username</button>
@@ -13,7 +13,7 @@
 
   <hr>
 
-  <div id="bio-text" class="row profileInput">
+  <div id="bio-text" class="container-fluid row profileInput">
     <h1></h1>
     <textarea id="editBio" type="text" class="form-control bio-text-area" ng-model="user.bio" placeholder="Bio"> </textarea>
     <button id="bio-submit" ng-click="updateBio()" class="btn btn-default btn-success">Update Bio</button>

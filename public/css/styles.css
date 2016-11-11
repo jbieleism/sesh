@@ -38,6 +38,12 @@ body{
 
 #bio-text{
   margin-top:50px;
+  height:250px;
+}
+#editBio{
+  height:100%;
+  text-align:center;
+
 }
 #bio-submit{
   margin-top:30px;

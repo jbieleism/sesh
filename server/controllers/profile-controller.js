@@ -71,7 +71,7 @@ module.exports.updateUsername = function(req, res){
 
 
 
-
+//function will update users bio
 module.exports.updateBio = function(req, res){
 
   var bio = req.body.bio;
