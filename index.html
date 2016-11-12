@@ -11,7 +11,7 @@
 
   <button class="btn btn-primary btn-default" ui-sref="login">Login</button>
 
-    <button ui-sref="login" ng-click="logoutUser();">Logout</button>
+  <button class="btn btn-primary" ng-show="loggedIn" ui-sref="login" ng-click="logoutUser();">Logout</button>
 
 </nav>
 

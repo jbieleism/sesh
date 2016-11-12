@@ -78,11 +78,16 @@
             })
             .error(function(error){
               console.log("There has been a grave error: ", error);
-            })
+          });
+
+        };
 
 
 
-        }
+
+
+
+
 
 
     }]);
