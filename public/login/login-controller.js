@@ -22,6 +22,16 @@
           })
       }
 
+      $scope.logoutUser = function(){
+
+        localStorage.clear();
+        $scope.loggedIn = false;
+        console.log("Successful logout")
+
+      }
+
+
+
 
     }])
 

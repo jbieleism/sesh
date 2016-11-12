@@ -5,12 +5,13 @@
   <title>Sesh</title>
 
 </head>
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top" ng-controller="LoginController">
 
   <button class="btn btn-primary btn-default" ui-sref="signUp">Create an account</button>
 
-  <button ng-show="!loggedIn" class="btn btn-primary btn-default" ui-sref="login">Login</button>
+  <button class="btn btn-primary btn-default" ui-sref="login">Login</button>
 
+    <button ui-sref="login" ng-click="logoutUser();">Logout</button>
 
 </nav>
 
