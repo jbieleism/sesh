@@ -22,12 +22,6 @@
           })
       }
 
-      $scope.logoutUser = function(){
-        localStorage['User-Data'] = null;
-        $scope.loggedIn = false;
-      }
-
-
     }])
 
 }());
