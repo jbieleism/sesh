@@ -22,6 +22,13 @@
           templateUrl: 'public/profile/edit-profile-view.html',
           controller: 'EditProfileController'
         })
+        .state('main', {
+          url: '/main',
+          templateUrl: 'public/main/main.html',
+          controller: 'MainController'
+        })
+
+
     })
 
 }());
