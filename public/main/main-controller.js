@@ -16,16 +16,16 @@
 
 
         var request = {
-          user: $scope.user.username || $scope.user.email,
+          user: $scope.user.email,
           userId: $scope.user._id,
-          // userImage: $scope.user.image,
+          userImage: $scope.user.image,
           description: $scope.newSesh
         }
 
-        $http.post('api/sesh/post', request)
+        $http.post('/api/sesh/post', request)
           .success(function(response){
             console.log("Sesh posted from main controller");
-
+            console.log("This is the response", response)
           })
           .error(function(error){
             console.log("There has been a grave error: ", error);
