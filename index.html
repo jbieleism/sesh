@@ -9,9 +9,9 @@
 
   <button class="btn btn-primary btn-default" ui-sref="signUp">Create an account</button>
 
-  <button class="btn btn-primary btn-default" ui-sref="login">Login</button>
+  <button class="btn btn-primary btn-default" ng-show="!loggedIn" ui-sref="login">Login</button>
 
-  <button class="btn btn-primary" ng-show="loggedIn" ui-sref="login" ng-click="logoutUser();">Logout</button>
+  <button class="btn btn-primary" ng-show="loggedIn" ui-sref="login" ng-click="logoutUser()">Logout</button>
 
 </nav>
 
@@ -31,10 +31,11 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js"></script>
   <script type="text/javascript" src="/public/index.js"></script>
 
-  <!-- controllers -->
+  <!-- Controllers -->
   <script src="public/signup/signup-controller.js"></script>
   <script src="public/login/login-controller.js"></script>
   <script src="public/profile/edit-controller.js"></script>
+  <script src="public/main/main-controller.js"></script>
 
 
   <!-- Libraries -->

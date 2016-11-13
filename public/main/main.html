@@ -1,5 +1,16 @@
-<div>
+<div class="container col-md-10 col-md-offset-1">
+
+  <button class="btn btn-success" ui-sref="editProfile"><span class="glyphicon glyphicon-user"></span></button>
 
 
+  <div class="row">
+
+    <textarea ng-model="newSesh"
+              class="form-control"
+              placeholder="what's the sesh?">
+
+    </textarea>
+    <button class="btn btn-primary" ng-click="sendSesh()">Create Sesh</button>
+  </div>
 
 </div>

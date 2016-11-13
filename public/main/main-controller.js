@@ -1,7 +1,7 @@
 (function(){
 
   angular.module('Sesh')
-    .controller('MainController', ['$http', '$scope', '$interval', function($http, $scope, $interval){
+    .controller('MainController', ['$scope', '$http', '$interval', function($scope, $http, $interval){
 
 
 
@@ -14,29 +14,28 @@
 
 
 
-      $scope.sendSesh = function(event){
-        if(event.which === 13){
+      $scope.sendSesh = function(){
 
-          var request = {
-            user: $scope.user.username || $scope.user.email,
-            userId: $scope.user._id,
-            userImage: $scope.user.image,
-            content: $scope.newSesh
-          };
+        console.log("poo poo")
 
+        // if (event.which === 13){
 
-          $http.post('/api/sesh/post', request)
-            .success(function(response){
-              console.log("Sesh posted from main controller")
-            })
-            .error(function(error){
-              console.log("There has been a grave error: ", error)
-          });
+        //   var request = {
+        //     user: $scope.user.username || $scope.user.email,
+        //     userId: $scope.user._id,
+        //     userImage: $scope.user.image,
+        //     description: $scope.newSesh
+        //   };
 
 
-
-
-        }
+        //   $http.post('/api/sesh/post', request)
+        //     .success(function(response){
+        //       console.log("Sesh posted from main controller")
+        //     })
+        //     .error(function(error){
+        //       console.log("There has been a grave error: ", error)
+        //   });
+        // }
       }
 
 

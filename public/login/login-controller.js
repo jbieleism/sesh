@@ -3,8 +3,6 @@
   angular.module('Sesh')
     .controller('LoginController', ['$scope', '$http', '$state', function($scope, $http, $state) {
 
-      console.log(localStorage)
-
       if (localStorage['User-Data']){
         $scope.loggedIn = true;
       }
@@ -20,9 +18,8 @@
             localStorage.setItem('User-Data', JSON.stringify(response));
           })
           .error(function(error){
-            // alert("Could Not Log In")
             console.log('You have made a grave error: ', error);
-          })
+        })
       }
 
       $scope.logoutUser = function(){

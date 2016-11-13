@@ -23,7 +23,7 @@
           controller: 'EditProfileController'
         })
         .state('main', {
-          url: '/main',
+          url: '/',
           templateUrl: 'public/main/main.html',
           controller: 'MainController'
         })

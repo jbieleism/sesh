@@ -8,6 +8,8 @@ var multipartMiddleware = multipart();
 var app = express();
 var authenticationController = require('./server/controllers/authentication-controller');
 var profileController = require('./server/controllers/profile-controller');
+var seshController = require('./server/controllers/sesh-controller')
+
 
 mongoose.connect('mongodb://localhost:27017/seshdb', () => console.log("Connected to Database"));
 
@@ -30,6 +32,12 @@ app.post('/api/user/login', authenticationController.login);
 app.post('/api/profile/editPhoto', multipartMiddleware, profileController.updatePhoto)
 app.post('/api/profile/updateUsername', profileController.updateUsername)
 app.post('/api/profile/bio', profileController.updateBio)
+
+
+app.post('/api/sesh/post', seshController.postSesh)
+
+
+
 
 var port = 8000;
 
