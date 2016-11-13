@@ -25,7 +25,7 @@
         $http.post('/api/sesh/post', request)
           .success(function(response){
             console.log("Sesh posted from main controller");
-            console.log("This is the response", response)
+            $scope.seshes = response;
             $scope.newSesh = "";
           })
           .error(function(error){

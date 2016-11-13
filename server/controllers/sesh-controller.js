@@ -1,5 +1,7 @@
 var Sesh = require('../models/sesh')
 
+
+
 module.exports.postSesh = function(req, res){
 
   var sesh = new Sesh(req.body);
