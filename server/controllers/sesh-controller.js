@@ -14,7 +14,7 @@ module.exports.postSesh = function(req, res){
         res.error(err);
       }
       else {
-        res.json(allSeshes);
+        res.send(allSeshes);
       }
     })
 

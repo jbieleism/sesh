@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use(multipartMiddleware)
 app.use('/public', express.static(__dirname + '/public'));
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
-
+app.use('/uploads', express.static(__dirname + '/uploads'))
 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')) );
 

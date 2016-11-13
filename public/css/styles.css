@@ -15,7 +15,7 @@ body{
 #passwordInput, #emailInput{
   text-align:center;
 }
-
+/*==============*/
 
 
 /*Edit Profile*/
@@ -34,8 +34,6 @@ body{
   margin-top:30px;
 }
 
-
-
 #bio-text{
   margin-top:50px;
   height:250px;
@@ -48,6 +46,29 @@ body{
 #bio-submit{
   margin-top:30px;
 }
+/*==============*/
+
+
+
+
+/*Main Sesh*/
+.sesh-table{
+  width:700px;
+}
+.sesh-row{
+  text-align:center;
+  margin-top:10px;
+  border-top:1px solid slategrey;
+}
+
+
+
+
+
+
+
+
+
 
 
 

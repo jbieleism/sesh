@@ -11,18 +11,25 @@
     <button class="btn btn-primary" ng-click="sendSesh()">Create Sesh</button>
   </div>
 
+</div>
+
+<div class="container col-md-10 col-md-offset-1">
 
 
   <div class="row">
-    <table>
-      <tr ng-repeat="sesh in seshes">
+    <table class="sesh-table">
+      <tr class="sesh-row" ng-repeat="sesh in seshes">
         <td>
-          {{sesh.user}}
-          <img class="img-responsive" ng-src="{{sesh.userImage}}">
+          <p>{{sesh.user}}</p>
+          <image class="img-responsive" ng-src="{{sesh.userImage}}" />
         </td>
 
         <td>
-          {{waste.date | date: mm/dd/yyyy}}
+          <p>{{sesh.description}}</p>
+        </td>
+
+        <td>
+          <span>{{sesh.date | date: mm/dd/yyyy}}</span>
         </td>
       </tr>
     </table>
