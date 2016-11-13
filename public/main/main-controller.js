@@ -26,6 +26,7 @@
           .success(function(response){
             console.log("Sesh posted from main controller");
             console.log("This is the response", response)
+            $scope.newSesh = "";
           })
           .error(function(error){
             console.log("There has been a grave error: ", error);

@@ -52,7 +52,7 @@
           $http.post('api/profile/updateUsername', request)
             .success(function(){
               console.log("Successfully updated username: ", request);
-              $scope.user.username = null;
+              $scope.user.username = "";
             })
             .error(function(error){
               console.log("There was a grave error: ", error);
@@ -74,7 +74,7 @@
           $http.post('api/profile/bio', request)
             .success(function(){
               console.log("Successful http post for bio");
-              $scope.user.bio = null;
+              $scope.user.bio = "";
             })
             .error(function(error){
               console.log("There has been a grave error: ", error);
