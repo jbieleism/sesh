@@ -1,14 +1,14 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
-var path = require('path');
-var multipart = require('connect-multiparty');
-var multipartMiddleware = multipart();
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const path = require('path');
+const multipart = require('connect-multiparty');
+const multipartMiddleware = multipart();
 
-var app = express();
-var authenticationController = require('./server/controllers/authentication-controller');
-var profileController = require('./server/controllers/profile-controller');
-var seshController = require('./server/controllers/sesh-controller')
+const app = express();
+const authenticationController = require('./server/controllers/authentication-controller');
+const profileController = require('./server/controllers/profile-controller');
+const seshController = require('./server/controllers/sesh-controller')
 
 
 mongoose.connect('mongodb://localhost:27017/seshdb', () => console.log("Connected to Database"));
@@ -35,7 +35,7 @@ app.post('/api/profile/bio', profileController.updateBio);
 
 
 app.post('/api/sesh/post', seshController.postSesh);
-// app.get('/api/sesh/get')
+app.get('/api/sesh/get', seshController.getSeshes)
 
 
 

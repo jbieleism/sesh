@@ -30,7 +30,5 @@ module.exports.getSeshes = (req, res) => {
         else{
           res.json(allSeshes)
         }
-      })
-
-
+      });
 }

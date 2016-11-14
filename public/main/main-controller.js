@@ -1,7 +1,7 @@
 (function(){
 
   angular.module('Sesh')
-    .controller('MainController', ['$scope', '$http', function($scope, $http){
+    .controller('MainController', ['$scope', '$http', '$interval', function($scope, $http, $interval){
 
 
 
@@ -37,7 +37,39 @@
       $scope.removeSeshes = function(){
         $scope.seshes = null;
 
+      };
+
+      function getSeshes(initial){
+        $http.get('/api/sesh/get')
+          .success(function(response){
+            if (initial){
+              $scope.seshes = response;
+            }
+            else{
+              $scope.incomingSeshes = response;
+            }
+          })
+          .error(function(error){
+            console.log("Grave Error on line 53: ", error)
+          })
+
+
       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }]);
