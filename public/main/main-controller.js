@@ -34,6 +34,11 @@
       };
 
 
+      $scope.removeSeshes = function(){
+        $scope.seshes = null;
+
+      }
+
 
     }]);
 

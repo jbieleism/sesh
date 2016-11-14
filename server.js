@@ -14,7 +14,7 @@ var seshController = require('./server/controllers/sesh-controller')
 mongoose.connect('mongodb://localhost:27017/seshdb', () => console.log("Connected to Database"));
 
 app.use(bodyParser.json());
-app.use(multipartMiddleware)
+app.use(multipartMiddleware);
 app.use('/public', express.static(__dirname + '/public'));
 app.use('/node_modules', express.static(__dirname + '/node_modules'));
 app.use('/uploads', express.static(__dirname + '/uploads'))
@@ -29,16 +29,25 @@ app.post('/api/user/login', authenticationController.login);
 
 
 // Profile
-app.post('/api/profile/editPhoto', multipartMiddleware, profileController.updatePhoto)
-app.post('/api/profile/updateUsername', profileController.updateUsername)
-app.post('/api/profile/bio', profileController.updateBio)
+app.post('/api/profile/editPhoto', multipartMiddleware, profileController.updatePhoto);
+app.post('/api/profile/updateUsername', profileController.updateUsername);
+app.post('/api/profile/bio', profileController.updateBio);
 
 
-app.post('/api/sesh/post', seshController.postSesh)
-
+app.post('/api/sesh/post', seshController.postSesh);
+// app.get('/api/sesh/get')
 
 
 
 var port = 8000;
 
 app.listen(port, () => console.log("Listening on port: ", port));
+
+
+
+
+
+
+
+
+
